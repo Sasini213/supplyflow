@@ -1,3 +1,2 @@
-cd D:\Supplyflow\supplyflow\backend
-venv\Scripts\activate
-pip freeze > requirements.txt
+flask
+flask-cors
