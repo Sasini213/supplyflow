@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import API_URL from '../api'
 import axios from 'axios'
 import {
   LineChart, Line, BarChart, Bar,
@@ -42,7 +43,7 @@ function Dashboard() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/stats')
+    axios.get(`${API_URL}/api/stats`)
       .then(res => {
         setStats(res.data)
         setLoading(false)

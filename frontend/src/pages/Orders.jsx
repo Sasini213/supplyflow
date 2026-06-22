@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import API_URL from '../api'
 import axios from 'axios'
 
 function StatusBadge({ status }) {
@@ -20,7 +21,7 @@ function Orders() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/orders')
+    axios.get(`${API_URL}/api/orders`)
       .then(res => {
         setOrders(res.data)
         setLoading(false)

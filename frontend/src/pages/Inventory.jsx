@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import API_URL from '../api'
 import axios from 'axios'
 
 function StockBadge({ status }) {
@@ -19,7 +20,7 @@ function Inventory() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/inventory')
+    axios.get(`${API_URL}/api/inventory`)
       .then(res => {
         setInventory(res.data)
         setLoading(false)
