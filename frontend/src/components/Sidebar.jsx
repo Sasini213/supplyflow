@@ -26,9 +26,10 @@ function Sidebar({ activePage, setActivePage }) {
           </button>
         ))}
       </nav>
-      <div className="p-4 border-t border-blue-700 text-blue-300 text-xs">
-        Sysco LABS Portfolio Project
-      </div>
+     <div className="p-4 border-t border-blue-700 text-blue-300 text-xs">
+       
+       <p className="mt-1">Portfolio Project by Sasini</p>
+     </div>
     </div>
   )
 }
